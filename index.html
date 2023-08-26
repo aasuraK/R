@@ -2,317 +2,238 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atharva Shelke - Portfolio</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atharva Shelke - Data Analyst Portfolio</title>
+    <style>
+        /* Resetting some default styles */
+        ul, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin-top: 50px;
+            color: #5C6D70; /* Soft gray text */
+            background-color: #E8F0F2; /* Soft blue background */
+            background-image: url('https://drive.google.com/uc?export=view&id=1OTLojmuyzJtL1vT6jis3BXzPL6kOgb9s');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-blend-mode: soft-light;
+            position: relative;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-      background-image: url("https://www.springboard.com/blog/wp-content/uploads/2021/08/what-does-a-data-analyst-do-2022-career-guide.png");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-color: rgba(255, 255, 255, 0.7);
-      color: #333;
-    }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            animation: fadeInDown 1s ease;
+            border-bottom: 2px solid #AABEC3; /* Soft gray border */
+        }
 
-    header {
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #ffffff;
-    }
+        header img {
+            width: 150px;
+            border-radius: 50%;
+            animation: fadeInLeft 1s ease;
+            border: 2px solid #AABEC3; /* Soft gray border */
+        }
 
-    header h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
+        header div {
+            text-align: left;
+            animation: fadeInRight 1s ease;
+        }
 
-    header img {
-      width: 150px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
+        h1, h2 {
+            color: #5C6D70; /* Soft gray text */
+            font-size: 2.5em;
+            animation: fadeInDown 1s ease;
+        }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-    }
+        button {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #B1C5C9; /* Soft gray background */
+            border: 2px solid #AABEC3; /* Soft gray border */
+            color: #5C6D70; /* Soft gray text */
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            animation: fadeInUp 1s ease;
+        }
 
-    nav ul li {
-      margin: 0 10px;
-    }
+        button:hover {
+            background-color: #E8F0F2; /* Soft blue background */
+            color: #5C6D70; /* Soft gray text */
+            transform: scale(1.1); /* Slightly enlarged */
+        }
 
-    nav ul li a {
-      text-decoration: none;
-      color: #ffffff;
-    }
+        img {
+            width: 300px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: transform 0.3s;
+            animation: fadeIn 1s ease;
+        }
 
-    section {
-      margin-bottom: 40px;
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+        img:hover {
+            transform: scale(1.05);
+        }
 
-    section h2 {
-      font-size: 20px;
-      margin-bottom: 20px;
-      text-align: center;
-      color: #4a148c;
-    }
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 640px;
+            margin: auto;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
 
-    .timeline {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+        .video-container::after {
+            content: '';
+            display: block;
+            padding-top: 56.25%;
+        }
 
-    .event {
-      background-color: #ffffff;
-      padding: 20px;
-      margin: 10px;
-      width: 300px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      animation: fade-in 1s ease-in-out;
-    }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: fadeIn 1s ease;
+        }
 
-    @keyframes fade-in {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
 
-    .project {
-      background-color: #ffffff;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      animation: slide-up 1s ease-in-out;
-    }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    @keyframes slide-up {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
 
-    #skills ul {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      grid-gap: 10px;
-    }
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
 
-    #achievements ul {
-      list-style-type: none;
-      text-align: center;
-    }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    #achievements ul li {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background-color: #4a148c;
-      color: #ffffff;
-      border-radius: 5px;
-      animation: pulse 1s infinite;
-    }
-    .project-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  margin-top: 10px;
-  background-color: transparent;
-  border: none;
-  border-radius: 5px;
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
 
-.project-button img {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-}
-
-.project-button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.1);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-  </style>
+    </style>
 </head>
 
 <body>
-  <header>
-    <img src="https://drive.google.com/uc?export=view&id=1igXspGl9gF599tn6mNESgmLbOYAB8zFH" alt="Profile Photo">
-    <h1>Atharva Shelke</h1>
-    <nav>
-      <ul>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section id="education">
-    <h2>Education</h2>
-    <div class="timeline">
-      <div class="event">
-        <h3>D. Y. Patil College of Engineering [PUNE]</h3>
-        <p>Bachelor of Engineering | CGPA: 8.3</p>
-        <p>Jun 2019 – June 2023</p>
-      </div>
-      <div class="event">
-        <h3>JDC Bytco College [NASHIK]</h3>
-        <p>Higher Secondary Education (HSC)</p>
-        <p>July 2018 – May 2019</p>
-      </div>
-      <div class="event">
-        <h3>Pathsetter</h3>
-        <p>Data Science and ML Fellowship | EDA · foundation · Data modeling and predictive analysis · Contemporary applications solving real world problems · Foundations of Data Science and ML project · Python (Programming Language)</p>
-        <p>Oct 2022 – June 2023</p>
-      </div>
-    </div>
-  </section>
-  
+    <header>
+        <img src="https://drive.google.com/uc?export=view&id=1igXspGl9gF599tn6mNESgmLbOYAB8zFH" alt="Profile Photo">
+        <div>
+            <h1>Atharva Shelke</h1>
+            <p>Email: atharvashelke1234@gmail.com</p>
+            <p>Mobile: +91-8623011047</p>
+            <!-- LinkedIn Profile Button -->
+<button onclick="window.open('https://www.linkedin.com/in/atharva-shelke2228')">LinkedIn Profile</button>
+<button onclick="window.open('https://github.com/aasuraK')">GITHUB Profile</button>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="timeline">
-      <div class="event">
-        <h3>Artificial Intelligence Intern</h3>
-        <p>Personifwy {Remote}</p>
-        <p>Feb 2022 – June 2022</p>
+        </div>
+    </header>
+    <h1>Welcome to My Data Analyst Portfolio</h1>
+    <section id="skills">
+        <h2>Technical Skills</h2>
         <ul>
-          <li>Designed a Machine model for projects Based on Image Classification and to apply CNN and NLP models on Ml Classification Along with the help of logistic and linear Algorithm.</li>
-          <li>Working with CNN, NLP, Matplotlib, AI-ML Tools.</li>
+            <li>Programming Languages: SQL, Python, Supervised learning, Unsupervised learning, Deep learning</li>
+            <li>Techniques: Logistic regression, Linear regression, ML Basics</li>
+            <li>Development Tools: Excel, AWS, PowerBI, ETL, DATA-piplines, warehousing</li>
+            <li>Libraries: SVM, NLTK, Seaborn, NumPy, Pytorch, Scikitlearn, Pandas, Matplotlib</li>
+            <li>Competitive Programming: 3 Codechef, Leetcode</li>
         </ul>
-      </div>
-      <div class="event">
-        <h3>Python Programming Intern</h3>
-        <p>Cognifront</p>
-        <p>Nov 2021 – Dec 2021</p>
+    </section>
+
+    <section id="achievements">
+        <h2>Achievements</h2>
         <ul>
-          <li>Worked with the seniors on various python models and solving problems in PYTHON.</li>
-          <li>Python, Problem Solving, Logic Building.</li>
+            <li>AccioSat 2022 Scholarship test Rank 373</li>
+            <li>IIT Guwahati Technothlon Junior Squad AIR-56</li>
+            <li>Qualified Meta Global Hackathon - ID</li>
+            <li>Cleared AWS ML Fellowship DEEPRACE</li>
         </ul>
-      </div>
-      <div class="event">
-        <h3>Mechanical Project Intern</h3>
-        <p>Quality Engineering {India}</p>
-        <p>June 2021 – July 2021</p>
-        <ul>
-          <li>Worked as a mechanical intern with a professional team on various machines to complete good jobs (Production).</li>
-          <li>Worked with - Lathe, Drill, and some Cutting machines.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    </section>
+    
+<section id="powerbi-visualization's">
+    <h2>My PowerBI Visualization</h2>
+    <img src="https://drive.google.com/uc?export=view&id=13QbbOpgBPlC8IrE61LXi1PCjgOc0QHzh" alt="PowerBI Visualization 1" style="max-width: 100%; height: auto;">
+    <img src="https://drive.google.com/uc?export=view&id=165mTJx48N7-tiSBEB2Cww4615-jhs1b6" alt="PowerBI Visualization 2" style="max-width: 100%; height: auto;">
+</section>
+    <!-- My Certificates Section -->
+<section id="certificates">
+    <h2>My Certificates</h2>
+    <button onclick="window.open('https://drive.google.com/file/d/102WLloJ4WVj3PjQ3KkomkKGNSfjlDFmg/view?usp=drive_link')">A.I Certification [INFOSYS]</button>
+    <button onclick="window.open('https://drive.google.com/file/d/1VaEoA4_M_4dluFWUUaI-MuvrbCCWzvmd/view?usp=drive_link')">Python Programmer [INFOSYS]</button>
+    <button onclick="window.open('https://drive.google.com/file/d/1BTE1PBHJjp_ll3plnEQPEaqIKT3C06Zz/view?usp=drive_link')">ML in Decision Maker [AWS]</button>
+    <button onclick="window.open('https://drive.google.com/file/d/1c86nOwzEH5q9WfVn0OLyT2pP4d5FYU96/view?usp=drive_link')">AI-DL-ML [AWS]</button>
+    <button onclick="window.open('https://drive.google.com/file/d/1PEV3N95CbsHr1Ej2zk8BoJimBoLf7Ghd/view?usp=drive_link')">DATA SCIENCE</button>
+    <button onclick="window.open('https://drive.google.com/file/d/1Qp-da0ncheAOr-F9-SLuZUyhfpJgzk2r/view?usp=drive_link')">Python for DataScience[IBM]</button>
+</section>
+    
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Data Analysis: Transaction Data and Purchase Behavior | Quantium 2023</h3>
-      <ul>
-        <li>Data preparation and customer analytics.</li>
-        <li>Experimentation and uplift testing.</li>
-        <li>Analytics and commercial application.</li>
-      </ul>
-      <button class="project-button" onclick="window.open('https://github.com/aasuraK/Data-Analysis-Transaction-Data-and-Purchase-Behavior-', '_blank')">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn11DXTzflt2Sxx851IGJF-8Vg7lpaAaIVjA" alt="GitHub">
-        GitHub
-      </button>
-    </div>
-    <div class="project">
-      <h3>Data Visualization: Empowering Business with Effective Insights | TATA [Forage 2023]</h3>
-      <ul>
-        <li>The Framing the Business Scenario. Choosing the Right Visuals. Creating Effective Visuals.</li>
-        <li>Communicating Insights and Analysis.</li>
-      </ul>
-      <button class="project-button" onclick="window.open('https://github.com/aasuraK/DatanVisualization-1/tree/main', '_blank')">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn11DXTzflt2Sxx851IGJF-8Vg7lpaAaIVjA" alt="GitHub">
-        GitHub
-      </button>
-    </div>
-    <div class="project">
-      <h3>Power BI Data Visualization |Data set by Aditya Vyass (2023)</h3>
-      <ul>
-        <li>Used an e-commerce dataset sourced from a social media platform to create a dynamic Power BI dashboard that provides insights into the number of orders, revenue, popular products, and countries where orders were placed.</li>
-        <li>The visualization helped identify trends and patterns that can be used to make data-driven decisions about product placement and marketing strategies.</li>
-      </ul>
-      <button class="project-button" onclick="window.open('https://www.linkedin.com/feed/update/urn:li:activity:7043943635876200448/', '_blank')">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn11DXTzflt2Sxx851IGJF-8Vg7lpaAaIVjA" alt="LinkedIn">
-        LinkedIn
-      </button>
-    </div>
-    <div class="project">
-      <h3>Reinforcement Learning Model to reduce lap timing within 3 min| Amazon AWS DEEPRACE [2023] </h3>
-      <ul>
-        <li>Developed a reinforcement learning agent using Python to control an autonomous vehicle in a simulated environment.</li>
-        <li>Implemented a reward function to optimize the agent's performance and encourage desired behavior. Skills- NLP, ML, AWS-ML, Reward function, Driving model.</li>
-      </ul>
-      <button class="project-button" onclick="window.open('https://www.linkedin.com/feed/update/urn:li:activity:7043943635876200448/', '_blank')">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn11DXTzflt2Sxx851IGJF-8Vg7lpaAaIVjA" alt="GitHub">
-        GitHub
-      </button>
-    </div>
-  </section>
-  
+    <!-- EDA Links -->
+    <button onclick="window.open('https://colab.research.google.com/drive/1q5iv6riYiHuOLoDzPsqavCd9wKawK5VM?usp=sharing')">EDA Notebook 1</button>
+    <button onclick="window.open('https://colab.research.google.com/drive/105iSIRZTrqXHE_zrlheBGPGHdWrZ9kWP?usp=sharing')">EDA Notebook 2</button>
 
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li>Programming Languages: SQL, Python, Supervised learning, Unsupervised learning, Deep learning</li>
-      <li>Techniques: Logistic regression, Linear regression, ML Basics</li>
-      <li>Development Tools: Excel, AWS, PowerBI, ETL, DATA-piplines, warehousing</li>
-      <li>Libraries: SVM, NLTK, Seaborn, NumPy, Pytorch, Scikitlearn, Pandas, Matplotlib</li>
-      <li>Competitive Programming: 3 Codechef, Leetcode</li>
-    </ul>
-  </section>
+    <!-- Reinforcement Learning Project -->
+    <h2>This is one of my Reinforcement learning model project</h2>
+    <img src="https://drive.google.com/uc?export=view&id=1m6e5y1aSVMZB0Lja0GpeEZ9-p25iDWXo" alt="Reinforcement Learning Image 1">
+    <img src="https://drive.google.com/uc?export=view&id=13N9uTqEcXkyJLTjsvv_n3Vy5GRH3Scvm" alt="Reinforcement Learning Image 2">
+<br></br>
 
-  <section id="achievements">
-    <h2>Achievements</h2>
-    <ul>
-      <li>AccioSat 2022 Scholarship test Rank 373</li>
-      <li>IIT Guwahati Technothlon Junior Squad AIR-56</li>
-      <li>Qualified Meta Global Hackathon - ID</li>
-    </ul>
-  </section>
+<!-- Additional Images -->
+<h2>Additional Works</h2>
+<img src="https://drive.google.com/uc?export=view&id=1gv9vJ6X-DqofgOlNTByrC8IL2106Qvx3" alt="Additional Work 1" style="max-width: 100%; height: auto;">
+<img src="https://drive.google.com/uc?export=view&id=1yYBCzKZQeXOfCXG5pl_pssWgnsBKedvU" alt="Additional Work 2" style="max-width: 100%; height: auto;">
+
 </body>
 
 </html>
+   
